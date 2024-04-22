@@ -1,2 +1,6 @@
 export {default as StarIcon} from './StarIcon'
 export {default as MovieIcon} from './MovieIcon'
+export {default as ChevronDoubleLeft} from './ChevronDoubleLeft'
+export {default as ChevronDoubleRight} from './ChevronDoubleRight'
+export {default as ChevronLeft} from './ChevronLeft'
+export {default as ChevronRight} from './ChevronRight'
