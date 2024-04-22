@@ -4,7 +4,6 @@ import useMovieDetails from "@/hooks/useMovieDetails";
 import Title from "@/components/Title/Title";
 import MovieCard from "@/components/ImageCard";
 import Rating from "@/components/Rating";
-import Image from "next/image";
 import Link from "next/link";
 import { CastCarousel } from "@/components/Carousel";
 import { IMDB_BASE_URL } from "@/constants";

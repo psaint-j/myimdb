@@ -7,14 +7,14 @@ type SettingsContextProps = {
 };
 
 const SettingsContext = createContext<SettingsContextType>({
-  darkMode: false,
+  darkMode: true,
   displayMode: "grid",
   toggleDarkMode: () => {},
   toggleDisplayMode: () => {},
 });
 
 const SettingsContextProvider = ({ children }: SettingsContextProps) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [displayMode, setDisplayMode] = useState("grid");
 
   const toggleDisplayMode = () => {
