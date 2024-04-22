@@ -2,7 +2,7 @@
 
 
 import { useContext } from "react";
-import { DarKModeContext } from "@/contexts/DarkModeContext";
+import { SettingsContext } from "@/contexts/SettingsContext";
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, ChevronDoubleLeft, ChevronDoubleRight } from "../Icons";
 
@@ -11,7 +11,7 @@ type PaginationType = {
   totalPages: number;
 };
 const Pagination = ({ currentPage, totalPages }: PaginationType) => {
-  const { darkMode } = useContext(DarKModeContext);
+  const { darkMode } = useContext(SettingsContext);
   const router = useRouter();
   const isFirstPage = currentPage === 1
   const isLastPage = currentPage === totalPages

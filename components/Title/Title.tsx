@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DarKModeContext } from "@/contexts/DarkModeContext";
+import { SettingsContext } from "@/contexts/SettingsContext";
 
 type Props = {
   title: string | undefined;
@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Title = ({ title, date, genre }: Props) => {
-  const { darkMode } = useContext(DarKModeContext);
+  const { darkMode } = useContext(SettingsContext);
   const year = date ? new Date(date).getFullYear(): null
   return (
     <div className="flex flex-col md:flex-row md:items-center gap-2 py-4">

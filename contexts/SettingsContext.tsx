@@ -1,19 +1,19 @@
 "use client";
 import { ReactNode, createContext, useState } from "react";
-import { DarkModeContextType } from "@/types";
+import { SettingsContextType } from "@/types";
 
-type DarKModeProviderProps = {
+type SettingsContextProps = {
   children: ReactNode;
 };
 
-const DarKModeContext = createContext<DarkModeContextType>({
+const SettingsContext = createContext<SettingsContextType>({
   darkMode: false,
   displayMode: "grid",
   toggleDarkMode: () => {},
   toggleDisplayMode: () => {},
 });
 
-const DarKModeProvider = ({ children }: DarKModeProviderProps) => {
+const SettingsContextProvider = ({ children }: SettingsContextProps) => {
   const [darkMode, setDarkMode] = useState(false);
   const [displayMode, setDisplayMode] = useState("grid");
 
@@ -25,7 +25,7 @@ const DarKModeProvider = ({ children }: DarKModeProviderProps) => {
     setDarkMode((prev) => !prev);
   };
   return (
-    <DarKModeContext.Provider
+    <SettingsContext.Provider
       value={{ darkMode, toggleDarkMode, displayMode, toggleDisplayMode }}
     >
       <body
@@ -35,8 +35,8 @@ const DarKModeProvider = ({ children }: DarKModeProviderProps) => {
       >
         {children}
       </body>
-    </DarKModeContext.Provider>
+    </SettingsContext.Provider>
   );
 };
 
-export { DarKModeContext, DarKModeProvider };
+export { SettingsContext, SettingsContextProvider };

@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
 import { useContext } from "react";
-import { DarKModeContext } from "@/contexts/DarkModeContext";
+import { SettingsContext } from "@/contexts/SettingsContext";
 import { usePathname } from "next/navigation";
 import { MovieIcon } from "@/components/Icons";
+import Display from "@/components/Display/Display";
 
 const Header = () => {
-  const { darkMode, toggleDarkMode } = useContext(DarKModeContext);
+  const { darkMode, toggleDarkMode } = useContext(SettingsContext);
   const url = usePathname()
   const showGoBackToList = /^\/(movie|people)/.test(url);
 

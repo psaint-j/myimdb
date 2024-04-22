@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import SWRProvider from "./SWRProvider";
 import Header from "@/components/Layout/Header";
-import { DarKModeProvider } from "@/contexts/DarkModeContext";
+import { SettingsContextProvider } from "@/contexts/SettingsContext";
 import "./globals.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -24,12 +24,12 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <DarKModeProvider>
+      <SettingsContextProvider>
           <SWRProvider>
             <Header />
             {children}
           </SWRProvider>
-      </DarKModeProvider>
+      </SettingsContextProvider>
     </html>
   );
 }

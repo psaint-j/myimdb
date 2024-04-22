@@ -94,7 +94,7 @@ export type SortOptionType = {
   label: string;
 };
 
-export type DarkModeContextType = {
+export type SettingsContextType = {
   darkMode: boolean;
   displayMode: string;
   toggleDarkMode: () => void;
