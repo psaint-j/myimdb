@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MovieIcon } from "@/components/Icons";
 import { Display } from "@/components/Display";
+import { View } from "@/components/View";
 
 const Header = () => {
   const url = usePathname()
@@ -17,6 +18,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           {showGoBackToList && <Link className="text-white" href="/">Retour à la liste</Link>}
           <Display />
+          <View />
         </div>
       </div>
     </header>
