@@ -29,12 +29,15 @@ const Movies = () => {
         />
         <div className="flex flex-col md:flex-row gap-4">
           {movie && (
+          <div className="flex flex-col gap-4">
             <MovieCard
               showInfo={false}
               hover={false}
               movie={movie}
               className="w-[300px] h-[450px]"
             />
+          {movie?.vote_average && <Rating vote={movie?.vote_average} />}
+          </div>
           )}
           <div className="flex flex-col gap-2">
             {movie?.tagline && <p>{`"${movie?.tagline}"`}</p>}

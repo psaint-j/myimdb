@@ -32,6 +32,7 @@ const Pagination = ({ currentPage, totalPages }: PaginationType) => {
         onClick={() => goToPage(currentPage - 1)}
         className={`relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg ${buttonStyles} text-center align-middle font-sans text-xs font-medium uppercase transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none`}
         type="button"
+        aria-label="previous"
       >
         <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
           <svg
@@ -52,14 +53,15 @@ const Pagination = ({ currentPage, totalPages }: PaginationType) => {
         </span>
       </button>
       <p className="block font-sans text-base antialiased font-normal leading-relaxed">
-        Page <strong className="">{currentPage}</strong> sur{" "}
-        <strong className="">{totalPages}</strong>
+        Page <strong>{currentPage}</strong>sur{" "}
+        <strong>{totalPages}</strong>
       </p>
       <button
         onClick={() => goToPage(currentPage + 1)}
-        disabled={currentPage + 1 === totalPages}
+        disabled={currentPage === totalPages}
         className={`relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg ${buttonStyles} text-center align-middle font-sans text-xs font-medium uppercase  transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none`}
         type="button"
+        aria-label="next"
       >
         <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
           <svg
