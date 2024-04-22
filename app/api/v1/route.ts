@@ -4,13 +4,8 @@ import { NextResponse, NextRequest } from 'next/server';
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url as string);
     const endpoint = searchParams.get("url");
-
-    console.log(endpoint);
     
-
     if (!endpoint) {
-
-        // return res.status(400).json({ message: 'Endpoint is required' });
         return new NextResponse(JSON.stringify({ message: 'Endpoint is required' }), {
             status: 400,
             headers: {
