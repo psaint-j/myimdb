@@ -1,6 +1,13 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import SWRProvider from "./SWRProvider";
+import Header from "@/components/Layout/Header";
+import { DarKModeProvider } from "@/contexts/DarkModeContext";
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +21,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <DarKModeProvider>
+          <SWRProvider>
+            <Header />
+            {children}
+          </SWRProvider>
+      </DarKModeProvider>
     </html>
   );
 }
