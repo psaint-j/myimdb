@@ -37,7 +37,7 @@ const Pagination = ({ currentPage, totalPages }: PaginationType) => {
         className={`relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg ${buttonStyles} text-center align-middle font-sans text-xs font-medium uppercase transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none`}
         type="button"
         disabled={isFirstPage}
-        aria-label="previous"
+        aria-label="first"
       >
         <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
           <ChevronDoubleLeft />
@@ -76,7 +76,7 @@ const Pagination = ({ currentPage, totalPages }: PaginationType) => {
         disabled={isLastPage}
         className={`relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg ${buttonStyles} text-center align-middle font-sans text-xs font-medium uppercase  transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none`}
         type="button"
-        aria-label="next"
+        aria-label="last"
       >
         <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
           <ChevronDoubleRight />
