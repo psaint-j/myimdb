@@ -11,7 +11,7 @@ type Props = {
 
 const ImageCard = ({ movie, className, showInfo = true, hover = true }: Props) => {
   return (
-    <Link href={movie ? `/movie/${movie.id}` : {}}>
+    <Link href={movie ? `/movies/${movie.id}` : {}}>
       <div
         className={`h-full w-full group relative rounded-lg overflow-hidden shadow-sm ${hover && "transition-transform duration-200 transform hover:delay-200 hover:z-10 md:hover:scale-125 cursor-pointer"}  ${className}`}
       >

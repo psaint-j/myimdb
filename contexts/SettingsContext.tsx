@@ -24,6 +24,7 @@ const SettingsContextProvider = ({ children }: SettingsContextProps) => {
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
   };
+  
   return (
     <SettingsContext.Provider
       value={{ darkMode, toggleDarkMode, displayMode, toggleDisplayMode }}

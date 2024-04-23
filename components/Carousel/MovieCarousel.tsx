@@ -16,7 +16,7 @@ const MovieCarousel = ({ movie, slideClass }: PropsType) => {
         {movie.map((el, index) => (
           <Link
           key={`${el.id}${index}`}
-          href={`/movie/${el.id}`}
+          href={`/movies/${el.id}`}
           className={`h-full group w-auto group relative rounded-lg overflow-hidden shadow-sm
           ${slideClass}`}
         >
@@ -63,7 +63,7 @@ const MovieCarousel = ({ movie, slideClass }: PropsType) => {
       {movie.map((el, index) => (
         <SwiperSlide key={`${el.id}${index}`} >
           <Link
-            href={`/movie/${el.id}`}
+            href={`/movies/${el.id}`}
             className={`group h-full w-auto group relative rounded-lg overflow-hidden shadow-sm
             ${slideClass}`}
           >
