@@ -4,7 +4,6 @@ import People from '../[id]/page';
 import usePeople from '@/hooks/usePeople';
 import { useParams } from 'next/navigation';
 
-jest.mock('next/image', () => ({ src, alt }: {src: string, alt: string}) => <img src={src} alt={alt} />);
 jest.mock('next/navigation', () => ({
   useParams: jest.fn(),
 }));
@@ -48,7 +47,7 @@ describe('People Component', () => {
     expect(screen.getByText('Movie Carousel Mock')).toBeInTheDocument();
 
     const image = screen.getByRole('img');
-    expect(image).toHaveAttribute('src', 'http://example.com/w300/path/to/image.jpg');
+    expect(image).toHaveAttribute('src', '/_next/image?url=http%3A%2F%2Fexample.com%2Fw300%2Fpath%2Fto%2Fimage.jpg&w=640&q=75');
     expect(image).toHaveAttribute('alt', 'John Doe');
   });
 
